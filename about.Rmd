@@ -1,0 +1,69 @@
+---
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    theme: cerulean
+---
+
+### This page includes information regarding my academic and professional experience
+
+## Education 
+
+* ___Columbia University Mailman School of Public Health, New York, NY  ( Expected April 2021)___                         
+  Master of Public Health, Population & Family Health
+Public Health Research Methods Certificate
+
+* ___University of California at Berkeley, Berkeley, CA (May 2018)___           B.A., Public Health, Public Policy Minor
+
+## Research
+
+* ___Global and Population Health Research Fellow, Columbia University                               May 2020- Present ___
+Santiago, Chile   
+In collaboration with the Society and Health Research Center at Universidad Mayor, conducted literature review on life course, aging, depression risks, and mediating role of alcohol. Consolidated and standardized codebook from cross-national representative surveys on aging. Analyzed HRS cross sectional data using STATA. 
+
+* ___Puerto Rico Interprofessional Research Fellow, Columbia University                                 Dec 2019-Present ___
+San Juan, Puerto Rico                           
+Liaison of research committee that oversees all aspects of research project on the prevalence of asthma as a result of hurricane Maria’s impact on housing quality in San Juan, Puerto Rico. Created tools for quantitative and qualitative data collection in English & Spanish. Developed reports and deliverables for partner organizations. 
+
+* ___Research Associate, Kristine Madsen Lab, UC Berkeley                                              June 2018 – July 2019 ___
+Performed soda tax evaluation, literature reviews, quantitative and qualitative data entry, cleaning, and analysis. Led research project and publication on qualitative interviews of small business owners in the Bay Area in order to evaluate the effects of the soda tax on their businesses. Managed 40 undergraduate student volunteers conducting data collection intercept surveys.
+
+* ___NIH Minority Health International Research Training Fellow, UC Berkeley        January 2017 –August 2017 ___
+Malawi, Africa
+Conducted bench research in Malawi, Africa investigating p.falciparum gametocyte sex ratio’s among school aged children with asymptomatic and cerebral malaria. Processed and evaluated 184 blood samples by conducting quantitative PCR. Collaborated with researchers in Malawi, Michigan State and Dominican University in San Rafael, CA.
+
+* ___Ronald E. McNair and Haas Scholars Research Fellowship, UC Berkeley            December 2015- May 2017 ___
+Designed and conducted original research project studying sugar-sweetened beverage consumption and perceptions of beverage healthiness and tap water quality among Latino/as in communities with non-potable tap water in the Central Valley of CA. Designed and conducted focus groups and survey in English and Spanish among 265 Latino/a households while overseeing a $5,000 research budget. 
+
+
+## Publications
+
+* Díaz-Valdés A, Seller C,___Ponce, J.___ 2020. Mediating Effect of Alcohol Use: Retirement and Depression in the United States. The Gerontologist. Under Review
+
+* ___Ponce J___, Yuan H, Mahmood H, Schillinger D, Lee M, Falbe J, Daniels R, Madsen K. 2020. Retailers Perspectives on Sugar-Sweetened Beverages Taxes in the California Bay Area. Journal Preventive Medicine Reports. 
+
+* Laguna M, Hecht A,___Ponce J___, Tyson J, Brindis C, Patel A. 2019. Teachers as Healthy Beverage Role Models: Relationship of Student and Teacher Beverage Choices in Elementary Schools. Journal of School Health. 
+
+* ___Ponce J___, Falbe J, Madsen K. 2017. Consumption and Perceptions of Sugar Sweetened Beverages and Tap Water Among Latino/as in Kings County. UC Berkeley McNair Research Journal. 
+
+* Bogan M, Hwan J, Cervantes K,___Ponce J___, Carlson S. 2017. Aquatic invertebrate communities exhibit both resistance and resilience to seasonal drying in an intermittent coastal stream. Hydrobiologia.
+
+## Volunteer Experience
+
+
+* ___Black and Latinx Student Caucus, Columbia University                                               August 2019- Present___ 
+  _President_                                                                                                                            
+
+* ___Society for the Advancement of Chicanos and Native Americans in Science, UC Berkeley, August 2014-May 2017___, _President_  
+
+* ___Chicano’s In Health Education (CHE), UC Berkeley                                                   August 2013- May 2017___ 
+ _Co-Networking Director_ 
+
+
+
+## LinkedIN Link
+		
+#### For more information: 
+* [linkedin](https://www.linkedin.com/in/julian-ponce/)
+
