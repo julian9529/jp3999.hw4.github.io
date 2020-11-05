@@ -14,16 +14,16 @@ library(p8105.datasets)
 library(plotly)
 ```
 
+```{r}
+instacartdf = instacart  %>%
+   filter(aisle %in% c("baking ingredients", "dog food care", "packaged vegetables fruits")) 
+```
+
 Column {data-width=650}
 -----------------------------------------------------------------------
 
-### Chart A
 
-```{r}
-instacart %>% 
-  mutate(department = fct_reorder(department, days_since_prior_order)) %>% 
-  plot_ly(y = ~days_since_prior_order, color = ~department, type = "box", colors = "viridis")
-```
+### Chart A
 
 Column {data-width=350}
 -----------------------------------------------------------------------
@@ -31,15 +31,17 @@ Column {data-width=350}
 ### Chart B
 
 ```{r}
-instacart %>% 
-  count(department) %>% 
-  mutate(department = fct_reorder(department, n)) %>% 
-  plot_ly(x = ~department, y = ~n, color = ~department, type = "bar", colors = "viridis")
+instacartdf %>% 
+  mutate(department = fct_reorder(department, days_since_prior_order)) %>% 
+  plot_ly(y = ~days_since_prior_order, color = ~department, type = "box", colors = "viridis")
 ```
 
 ### Chart C
 
 ```{r}
-
+instacartdf %>% 
+  count(department) %>% 
+  mutate(department = fct_reorder(department, n)) %>% 
+  plot_ly(x = ~department, y = ~n, color = ~department, type = "bar", colors = "viridis")
 ```
 

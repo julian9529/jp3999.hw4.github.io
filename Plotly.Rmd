@@ -13,30 +13,37 @@ output:
 library(tidyverse)
 library(p8105.datasets)
 library(plotly)
+
 ```
 install.packages("plotly")
 install.packages("flexdashboard")
 
-##Scatterplot
-
-
 ```{r}
-instacart  %>%
-  plot_ly(
-    x = ~lat, y = ~long, type = "scatter", mode = "markers",
-    color = ~price, text = ~text_label, alpha = 0.5)
+instacartdf = instacart  %>%
+   filter(aisle %in% c("baking ingredients", "dog food care", "packaged vegetables fruits")) 
 ```
 
+```{r}
+instacart_df2 = instacart %>%
+  filter(aisle %in% c("packaged vegetables fruits")) %>%
+  group_by(aisle, order_hour_of_day, department, product_name) %>% 
+  count(product_name) 
+```
+
+##Scatterplot
+
+instacart_df2 %>%
+    plot_ly(x = ~order_hour_of_day, y = ~n, type = "scatter", mode = "markers", color=~product_name, alpha = 0.5)
 #Boxplot
 
 ```{r}
-instacart %>% 
+instacartdf %>% 
   mutate(department = fct_reorder(department, days_since_prior_order)) %>% 
   plot_ly(y = ~days_since_prior_order, color = ~department, type = "box", colors = "viridis")
 ```
 #Barchart
 ```{r}
-instacart %>% 
+instacartdf %>% 
   count(department) %>% 
   mutate(department = fct_reorder(department, n)) %>% 
   plot_ly(x = ~department, y = ~n, color = ~department, type = "bar", colors = "viridis")
