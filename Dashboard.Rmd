@@ -21,9 +21,20 @@ instacartdf = instacart  %>%
 
 Column {data-width=650}
 -----------------------------------------------------------------------
+```{r}
+instacart_df2 = instacart %>%
+  filter(aisle %in% c("packaged vegetables fruits")) %>%
+  group_by(aisle, order_hour_of_day, department, product_name) %>% 
+  count(department) 
+```
 
 
 ### Chart A
+
+```{r}
+    instacart_df2 %>%
+plot_ly(x = ~order_hour_of_day, y = ~n, type = "scatter", mode = "markers", color=~department, alpha = 0.5, colors = "viridis")
+```
 
 Column {data-width=350}
 -----------------------------------------------------------------------

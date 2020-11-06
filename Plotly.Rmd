@@ -27,13 +27,18 @@ instacartdf = instacart  %>%
 instacart_df2 = instacart %>%
   filter(aisle %in% c("packaged vegetables fruits")) %>%
   group_by(aisle, order_hour_of_day, department, product_name) %>% 
-  count(product_name) 
+  count(department) 
 ```
 
 ##Scatterplot
 
-instacart_df2 %>%
-    plot_ly(x = ~order_hour_of_day, y = ~n, type = "scatter", mode = "markers", color=~product_name, alpha = 0.5)
+
+```{r}
+    instacart_df2 %>%
+plot_ly(x = ~order_hour_of_day, y = ~n, type = "scatter", mode = "markers", color=~department, alpha = 0.5)
+```
+
+
 #Boxplot
 
 ```{r}
