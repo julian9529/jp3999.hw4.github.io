@@ -6,7 +6,7 @@ navbar:
     - text: "About"
       href: about.html
     - text: "Plotly"
-      href: plotly.html
+      href: Plotly.html
     - text: "Dashboard"
       href: Dashboard.html
     - text: "Linkedin"
