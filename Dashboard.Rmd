@@ -23,6 +23,7 @@ Column {data-width=650}
 -----------------------------------------------------------------------
 ```{r}
 instacart_df2 = instacart %>%
+  
   filter(department %in% c("frozen", "produce", "deli")) %>%
   group_by(aisle, order_hour_of_day, department, order_dow) %>% 
   count(department) %>% 
@@ -46,6 +47,7 @@ Column {data-width=350}
 ```{r}
 instacartdf %>% 
   mutate(department = fct_reorder(department, days_since_prior_order)) %>% 
+
   plot_ly(y = ~days_since_prior_order, color = ~department, type = "box", colors = "viridis")
 ```
 
@@ -54,6 +56,7 @@ instacartdf %>%
 ```{r}
 instacartdf %>% 
   count(department) %>% 
+
   mutate(department = fct_reorder(department, n)) %>% 
   plot_ly(x = ~department, y = ~n, color = ~department, type = "bar", colors = "viridis")
 ```
