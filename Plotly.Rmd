@@ -21,13 +21,17 @@ install.packages("flexdashboard")
 ```{r}
 instacartdf = instacart  %>%
    filter(aisle %in% c("baking ingredients", "dog food care", "packaged vegetables fruits")) 
+
 ```
 
 ```{r}
 instacart_df2 = instacart %>%
-  filter(aisle %in% c("packaged vegetables fruits")) %>%
-  group_by(aisle, order_hour_of_day, department, product_name) %>% 
-  count(department) 
+  filter(department %in% c("frozen", "produce", "deli")) %>%
+  group_by(aisle, order_hour_of_day, department, order_dow) %>% 
+  count(department) %>% 
+    filter(n < 400, n > 0) %>% 
+  rename(department_count = n) 
+
 ```
 
 ##Scatterplot
@@ -35,7 +39,7 @@ instacart_df2 = instacart %>%
 
 ```{r}
     instacart_df2 %>%
-plot_ly(x = ~order_hour_of_day, y = ~n, type = "scatter", mode = "markers", color=~department, alpha = 0.5)
+plot_ly(y = ~department_count, x = ~order_hour_of_day, type = "scatter", mode = "markers", color=~department, alpha = 0.5, colors = "viridis")
 ```
 
 
@@ -44,7 +48,7 @@ plot_ly(x = ~order_hour_of_day, y = ~n, type = "scatter", mode = "markers", colo
 ```{r}
 instacartdf %>% 
   mutate(department = fct_reorder(department, days_since_prior_order)) %>% 
-  plot_ly(y = ~days_since_prior_order, color = ~department, type = "box", colors = "viridis")
+  plot_ly(x = ~department, y = ~days_since_prior_order, color = ~department, type = "box", colors = "viridis")
 ```
 #Barchart
 ```{r}

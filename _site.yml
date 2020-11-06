@@ -7,6 +7,8 @@ navbar:
       href: about.html
     - text: "Plotly"
       href: plotly.html
+    - text: "Dashboard"
+      href: Dashboard.html
     - text: "Linkedin"
       href: https://www.linkedin.com/in/julian-ponce/
     - icon: fa-envelope fa-lg

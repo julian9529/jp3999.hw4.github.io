@@ -23,9 +23,11 @@ Column {data-width=650}
 -----------------------------------------------------------------------
 ```{r}
 instacart_df2 = instacart %>%
-  filter(aisle %in% c("packaged vegetables fruits")) %>%
-  group_by(aisle, order_hour_of_day, department, product_name) %>% 
-  count(department) 
+  filter(department %in% c("frozen", "produce", "deli")) %>%
+  group_by(aisle, order_hour_of_day, department, order_dow) %>% 
+  count(department) %>% 
+    filter(n < 400, n > 0) %>% 
+  rename(department_count = n) 
 ```
 
 
@@ -33,7 +35,7 @@ instacart_df2 = instacart %>%
 
 ```{r}
     instacart_df2 %>%
-plot_ly(x = ~order_hour_of_day, y = ~n, type = "scatter", mode = "markers", color=~department, alpha = 0.5, colors = "viridis")
+plot_ly(y = ~department_count, x = ~order_hour_of_day, type = "scatter", mode = "markers", color=~department, alpha = 0.5, colors = "viridis")
 ```
 
 Column {data-width=350}
